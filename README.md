@@ -23,10 +23,10 @@ Or install it yourself as:
 ## Configure
 
 ```ruby
-    Swanest.configure do |conf|
-      conf.client_id = ""
-      conf.client_secret = ""
-    end
+Swanest.configure do |conf|
+  conf.client_id = ""
+  conf.client_secret = ""
+end
 ```
 
 ## Usage
