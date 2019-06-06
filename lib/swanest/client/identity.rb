@@ -44,9 +44,6 @@ module Swanest
             "Authorization" => "Bearer #{access_token}"
           },
         }
-
-        debugger
-
         post("/users/shared", default_params.deep_merge(params), default_options.deep_merge(options))
       end
 
