@@ -47,6 +47,26 @@ module Swanest
         post("/users/shared", default_params.deep_merge(params), default_options.deep_merge(options))
       end
 
+      # Returns access token for user with broker,profile,makrket_data read 
+      #
+      # @requires_authentication Yes
+      #
+      # @param options [Hash] A customizable set of options.
+
+      def user_login(params={}, options={}, user_id)
+        default_params = {
+          :client_id => client_id,
+          :client_secret => client_secret,
+          :grant_type => "client_credentials",
+          :scope => "broker:write broker:read profile market_data:read",
+          :user_id => user_id
+        }
+        default_options = {
+          url: identity_endpoint
+        }
+        post("/oauth/token", default_params.deep_merge(params), default_options.deep_merge(options))
+      end
+
     end
   end
 end

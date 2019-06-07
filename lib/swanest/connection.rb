@@ -2,6 +2,7 @@ require 'faraday'
 require 'faraday_middleware'
 require 'swanest/core_ext/hash'
 require 'swanest/response/raise_client_error'
+require 'swanest/response/raise_server_error'
 require 'json'
 
 module Swanest
