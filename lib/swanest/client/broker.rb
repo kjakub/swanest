@@ -9,11 +9,11 @@ module Swanest
       #
       # @param options [Hash] A customizable set of options.
       
-      def get_portfolios(options={})
+      def get_portfolios(params={}, options={})
         default_options = {
           url: broker_endpoint
         }
-        get("portfolios", connection_options.merge(default_options))
+        get("/portfolios", params, default_options.deep_merge(options))
       end
 
     end

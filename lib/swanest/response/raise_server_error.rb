@@ -1,5 +1,5 @@
 require 'faraday'
-require 'angellist_api/error/internal_server_error'
+require 'swanest/error/internal_server_error'
 
 
 module Swanest
@@ -8,7 +8,7 @@ module Swanest
       def on_complete(env)
         case env[:status].to_i
         when 500
-          raise Swanest::Error::InternalServerError.new(error_message(env, "Something is technically wrong."), env[:response_headers])
+          raise Swanest::Error::InternalServerError.new(error_message(env), env[:response_headers])
         end
       end
 
@@ -22,9 +22,6 @@ module Swanest
         # will be json because faraday parser
         body
       end
-
-
-
     end
   end
 end

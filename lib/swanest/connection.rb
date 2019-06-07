@@ -32,7 +32,7 @@ module Swanest
         builder.use Swanest::Response::RaiseClientError
         #builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson
-        #builder.use Swanest::Response::RaiseServerError
+        builder.use Swanest::Response::RaiseServerError
         builder.adapter(adapter)
       end
 
