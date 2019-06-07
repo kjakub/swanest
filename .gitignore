@@ -12,3 +12,6 @@
 
 # byebug i need for development
 .byebug_history
+
+# env with client id, client secret
+.env
