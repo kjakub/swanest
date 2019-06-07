@@ -1,6 +1,7 @@
 require "swanest/version"
 require 'swanest/configuration'
 require 'swanest/client'
+require 'byebug'
 
 module Swanest
   extend Configuration

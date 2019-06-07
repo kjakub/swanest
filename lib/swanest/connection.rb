@@ -1,6 +1,7 @@
 require 'faraday'
 require 'faraday_middleware'
 require 'swanest/core_ext/hash'
+require 'swanest/response/raise_client_error'
 require 'json'
 
 module Swanest
@@ -28,7 +29,7 @@ module Swanest
         #builder.use Faraday::Request::Multipart
         #builder.use Faraday::Request::UrlEncoded
         #builder.use Swanest::Request::Gateway, gateway if gateway
-        #builder.use Swanest::Response::RaiseClientError
+        builder.use Swanest::Response::RaiseClientError
         #builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson
         #builder.use Swanest::Response::RaiseServerError

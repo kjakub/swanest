@@ -22,7 +22,7 @@ module Swanest
         post("/oauth/token", default_params.deep_merge(params), default_options.deep_merge(options))
       end
 
-      # Returns user id created 
+      # Returns a hash with userId created {"userId"=>""}
       #
       # @requires_authentication access_token from app_login
       #
