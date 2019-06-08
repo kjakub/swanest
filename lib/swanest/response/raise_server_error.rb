@@ -1,7 +1,6 @@
 require 'faraday'
 require 'swanest/error/internal_server_error'
 
-
 module Swanest
   module Response
     class RaiseServerError < Faraday::Response::Middleware

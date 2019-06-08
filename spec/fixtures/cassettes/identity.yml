@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx/1.15.9
       Date:
-      - Fri, 07 Jun 2019 13:44:58 GMT
+      - Sat, 08 Jun 2019 09:53:01 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -55,10 +55,73 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"470-oBwIR8mieT9n3MB/GbPXqMxjLEc"
+      - W/"470-IWDeK+iUvOZ9RK3PN5vDYklHLRE"
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"<manually removed as suggested and dont record anymore>","expires_at":1559918698,"expires_in":3600,"issued_at":1559915098,"scope":"identity:create","token_type":"Bearer"}'
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWNjZXNzVG9rZW4iLCJzY29wZSI6ImlkZW50aXR5OmNyZWF0ZSIsImlhdCI6MTU1OTk4NzU4MSwiZXhwIjoxNTU5OTkxMTgxLCJhdWQiOiJjODY3YWVhMy02MDhkLTQ5ZWEtOWE1YS02MmZmYjUxZDAyNDAiLCJpc3MiOiJodHRwczovL2lkZW50aXR5LmNpLnN3YW5lc3QuY29tIiwic3ViIjoiYzg2N2FlYTMtNjA4ZC00OWVhLTlhNWEtNjJmZmI1MWQwMjQwIn0.qhDSvzd4GkoBZY_cOyLgDadygoUODxsuDxaNpda2JVutklXtrkqKQYJcAs1zNWQA5NK8HqF-LRsvoKBnanrr28rbHylZwCCkPGWXSaItbZlMMuA5g0EEMOnSZJCjddSPZLmzagDn0AYkFVZcE5stLTa28SEa598DnqAQSy4YMTYjnlh0RgjfMmc4wEq2GLtOj8dxV3OEo3gRQaJ31XYM7cqLFa2az_3fw05WG3PfBArGoioM0QMGkEdwbG1zGynNY9Lh3jKiyxO5df8Z-GtUooEcsRzjQcvc-FsJ-VQrVvcweSOKyv1s9od6STblg2o5h-dQzDRqfCksSTXyfjxCyL_HXGpMwLjpRnZhC4zYFfH04eblfuatyYQ8AAC2ujxaPqIkHUjbEmptoGYRkpHgfjuLOTRnLpbbkAB1_7KcHjyJoFLHmUm1gWXhWdFJWP09SZSUOeFW0oLQuvVNFqcEvZXBTtq3pX3niQaU_5jHm3p2-ex7HAXMz5yVP74oSMm1hd-v3JOHXOiJQEAUCxa4TOra5-nQIBwRL47TN7fGM8uxglfWYakqgf0nCZNHvpG94LnVYvFNsGbERw5F3y6vyfQ0cjs_UmtzBr2Stg6IIY_n3Bh8uGOa3CbI-fqYpQUn0d3rXntj6M2e54w7m-VKZrsRARqjPmRcqrTpLtxuviI","expires_at":1559991181,"expires_in":3600,"issued_at":1559987581,"scope":"identity:create","token_type":"Bearer"}'
     http_version: 
-  recorded_at: Fri, 07 Jun 2019 13:44:58 GMT
+  recorded_at: Sat, 08 Jun 2019 09:53:01 GMT
+- request:
+    method: post
+    uri: https://identity.ci.swanest.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","grant_type":"client_credentials","scope":"broker:write
+        broker:read profile market_data:read","user_id":"5ce69d3b68d67300083becfb"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Swanest Ruby Gem 0.1.0
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.9
+      Date:
+      - Sat, 08 Jun 2019 09:53:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Dns-Prefetch-Control:
+      - 'off'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"883-hPFMYOf+pplS7Y9nJ8Cd1OCSipA"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"<access_token>","expires_at":1559991181,"expires_in":3600,"id_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiaWRUb2tlbiIsImlhdCI6MTU1OTk4NzU4MSwiZXhwIjoxNTYyNTc5NTgxLCJhdWQiOiJodHRwczovL2lkZW50aXR5LmNpLnN3YW5lc3QuY29tIiwiaXNzIjoiaHR0cHM6Ly9pZGVudGl0eS5jaS5zd2FuZXN0LmNvbSIsInN1YiI6IjVjZTY5ZDNiNjhkNjczMDAwODNiZWNmYiJ9.oMpl-XDqZ1hJwbCxuj0mUQIgRFe1V3CTikbmC6_mOcRWyZHAGaKWX39n2ptpU2NbbjfGxN3KtnYqkuBKVP-UrD_-w6h07dmuVazVZYaQpo5xgEIxjkM5UNvxT6DPHH5RsD6JhFMksfqbhonIMEr1XOYecrV4SDaZpskhfBGdvYvzKJGZjmEI3Y-xNrhJimNc9UE-M7kDNMfe5VOrWJQlDtkR1cQ6lW6Et0rzQ-z-4q1CfyAqZCg1hYzY1q7_jTl2wK8kN27ThPcZQZN1g5CJNnrXBuukSZhDRoDmkvSOLbBYsWN1v2t6ORRTmdU8V8oMvcfk7JH3U-9gDecihIBHhzSaCKR3SJuQu_EoSRfvx2g6T_S4gJwxpCjLUC_XskAqQqJzUsNgU5cCVphVFtltu4SPBjdHovVvzbi1F81w4Ghpa3DsM9X7Zk9nqI35kLG2jilb2cNfpXfTdR0VX6jG65X00WU75llCH3UkE8n95JF9E4Ux2Z_KhTiEuCqjI0XR-30We1aJGMLNHF4b0ecdOsLvM6ewwjVv-vh9sV1TjPKPAt1c6wNefXIBYVE09WiD4lT2HriB_Lf-m8Aubd9YQV7RgCvpMenxWMh2_GtaRh3r9LRgg8q74-xgebst7C7cmioE4KR2awFq3fhXNS8DtZHJw1TLxrvcpPK7M3Au-3A","issued_at":1559987581,"profile_compliant":true,"scope":"broker:write
+        broker:read profile market_data:read","token_type":"Bearer"}'
+    http_version: 
+  recorded_at: Sat, 08 Jun 2019 09:53:01 GMT
 recorded_with: VCR 5.0.0

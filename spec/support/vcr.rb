@@ -4,6 +4,11 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
+  c.default_cassette_options = {
+    :record => :once,
+    :match_requests_on => [:method, :body, :headers]
+  }
+
 
  # In recorded cassettes, replace these environment variable values with a
   # placeholder like <VARIABLE>

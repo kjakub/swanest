@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://broker.ci.swanest.com/portfolios
+    body:
+      encoding: UTF-8
+      string: '{"isLive":false,"name":"this is my portfolio","config":{"currency":"EUR","targetRiskNumber":1,"timeHorizon":{"years":3},"createdAt":"2019-05-23T14:42:02.523Z"}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Swanest Ruby Gem 0.1.0
+      Cache-Control:
+      - no-cache
+      Authorization:
+      - Bearer <user_access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.9
+      Date:
+      - Sat, 08 Jun 2019 09:47:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"1df-FD2bYtui0QMXB09DJ/OwhSjAcAg"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"userId":"5ce69d3b68d67300083becfb","portfolioId":"5cfb842d9427dd00095da968","name":"this
+        is my portfolio","configurationChanges":[{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-08T09:47:25.089Z"}],"configuration":{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-08T09:47:25.089Z"},"isGarbage":false,"isLive":false,"createdAt":"2019-06-08T09:47:25.089Z"}'
+    http_version: 
+  recorded_at: Sat, 08 Jun 2019 09:47:25 GMT
+recorded_with: VCR 5.0.0
