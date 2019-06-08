@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe Swanest::Client::Identity, :authenticated,
-  :vcr => { :cassette_name => 'identity' } do
+  :vcr => { :cassette_name => 'identity', :record => :none } do
 
   let(:client) { Swanest::Client.new }
 
