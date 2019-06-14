@@ -27,7 +27,7 @@ module Swanest
       #
       # @param options [Hash] A customizable set of options.
       
-      def get_portfolios(params={}, options={})
+      def get_portfolios(params={}, options={}, user_access_token)
         default_options = {
           url: broker_endpoint
         }
