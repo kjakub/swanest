@@ -29,7 +29,10 @@ module Swanest
       
       def get_portfolios(params={}, options={}, user_access_token)
         default_options = {
-          url: broker_endpoint
+          url: broker_endpoint,
+          headers: {
+            "Authorization" => "Bearer #{user_access_token}"
+          }          
         }
         get("/portfolios", params, default_options.deep_merge(options))
       end
