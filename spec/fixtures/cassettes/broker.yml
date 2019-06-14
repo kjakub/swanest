@@ -66,4 +66,70 @@ http_interactions:
         is my portfolio","configurationChanges":[{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-08T09:47:25.089Z"}],"configuration":{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-08T09:47:25.089Z"},"isGarbage":false,"isLive":false,"createdAt":"2019-06-08T09:47:25.089Z"}'
     http_version: 
   recorded_at: Sat, 08 Jun 2019 09:47:25 GMT
+- request:
+    method: get
+    uri: https://broker.ci.swanest.com/portfolios
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Swanest Ruby Gem 0.1.0
+      Cache-Control:
+      - no-cache
+      Authorization:
+      - Bearer <user_access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.15.9
+      Date:
+      - Fri, 14 Jun 2019 12:17:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Surrogate-Control:
+      - no-store
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, proxy-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"86b-5wvhEY19PBIwsz/2bkQR3AprEVU"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"userId":"5cfcf1154af31b00085f0434","name":"N/A","details":{"from":"2019-06-14T10:46:43.957Z","to":"2019-06-14T12:17:32.179Z","fromAmount":915,"toAmount":915.012,"returnAmount":0.012,"allocation":[{"iid":"SW:2UU.NZP","units":3,"weight":1}],"timeSeries":[{"date":"2019-06-14T10:46:43.957Z","value":100},{"date":"2019-06-14T12:17:32.179Z","value":100.001}]},"portfolios":[{"userId":"5cfcf1154af31b00085f0434","portfolioId":"5cfcfbbbd8accc3838a12505","name":"Garbage","configurationChanges":[{"managementType":"none","currency":"EUR","createdAt":"2019-06-09T12:29:47.305Z"}],"configuration":{"managementType":"none","currency":"EUR","createdAt":"2019-06-09T12:29:47.305Z"},"isGarbage":true,"isLive":false,"createdAt":"2019-06-09T12:29:47.305Z","details":{"from":"2019-06-09T12:29:47.305Z","to":"2019-06-14T12:17:32.179Z","fromAmount":0,"toAmount":0,"returnAmount":0,"allocation":[]}},{"userId":"5cfcf1154af31b00085f0434","portfolioId":"5d0377eba174aa000b78ef07","name":"aka8797","configurationChanges":[{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-14T10:33:15.077Z"}],"configuration":{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-14T10:33:15.077Z"},"isGarbage":false,"isLive":false,"createdAt":"2019-06-14T10:33:15.077Z","details":{"from":"2019-06-14T10:33:15.077Z","to":"2019-06-14T12:17:32.179Z","fromAmount":0,"toAmount":915.012,"returnAmount":0,"allocation":[{"iid":"SW:2UU.NZP","units":3,"weight":1}]}},{"userId":"5cfcf1154af31b00085f0434","portfolioId":"5d038d55a174aa000b78ef4b","name":"this
+        is my portfolio","configurationChanges":[{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-14T12:04:37.152Z"}],"configuration":{"targetRiskNumber":1,"managementType":"none","timeHorizon":{"years":3},"currency":"EUR","createdAt":"2019-06-14T12:04:37.152Z"},"isGarbage":false,"isLive":false,"createdAt":"2019-06-14T12:04:37.152Z","details":{"from":"2019-06-14T12:04:37.152Z","to":"2019-06-14T12:17:32.179Z","fromAmount":0,"toAmount":0,"returnAmount":0,"allocation":[]}}]}'
+    http_version: 
+  recorded_at: Fri, 14 Jun 2019 12:17:32 GMT
 recorded_with: VCR 5.0.0

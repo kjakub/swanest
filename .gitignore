@@ -15,3 +15,6 @@
 
 # env with client id, client secret
 .env
+
+# locale .rvmrc
+.rvmrc

@@ -9,9 +9,15 @@ RSpec.describe Swanest::Client::Broker, :authenticated,
   }
   let(:user_access_token) { "<user_access_token>" }
   
-  it 'creates portfolio for user' do
+  it 'creates portfolio for user', :vcr => { :cassette_name => 'broker', :record => :none } do
   	response = client.create_portfolio(portfolio_attributes, {}, user_access_token)
     expect(response).to have_key("portfolioId")
   end
+
+  it 'gets portfolios for user' do
+    response = client.get_portfolios({}, {}, user_access_token)
+    expect(response).to have_key("portfolios")
+  end
+
 
 end
