@@ -6,7 +6,7 @@ module Swanest
     class RaiseClientError < Faraday::Response::Middleware
       def on_complete(env)
         case env[:status].to_i
-        when 400
+        when 400..499
           raise Swanest::Error::BadRequest.new(error_message(env), env[:response_headers])
         end
       end
