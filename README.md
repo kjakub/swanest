@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/kjakub/swanest.svg?branch=master)](https://travis-ci.org/kjakub/swanest)
 
-# Swanest ruby wrapper DO NOT USE YET WIP! INSPIRED BY ANGEL LIST
+# Swanest ruby wrapper (WIP)
+ 
+A Ruby wrapper for the [Swanest](https://swanest.com/) API
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/swanest`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+*ruby code design inspired from angel list gem*
 
 ## Installation
 
@@ -31,9 +31,35 @@ Swanest.configure do |conf|
 end
 ```
 
-## Usage
+## Scenario 1
+#### from client i want to login to swanest
+```ruby
+Swanest.app_login
+```
+will login with `:scope => "identity:create"` and `:grant_type=>"client_credentials"`and return **access_token** valid for 1h
+if you wish to login with another scope and to another default url you can override  
+```ruby
+Swanest.app_login({scope: "another scope"},{url: "another url"})
+```
+## Scenario 2
+#### from client i want to create user in swanest
+```ruby
+Swanest.create_user({partnerId:"your internal id"},{}, access_token)
+```
+**access_token** is not required, and if not supplied it will use `Swanest.app_login` by default 
 
-TODO: Write usage instructions here
+will create user with default params as follows
+```ruby
+default_params = {
+  :country => 'BE',
+  :language => 'en',
+  :partnerId => params.fetch(:partnerId),
+  :primaryCurrency => 'EUR'
+}
+```
+custom params is allowed of course
+
+
 
 ## Development
 
