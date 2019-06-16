@@ -3,6 +3,7 @@
 # Swanest ruby wrapper (WIP)
  
 A Ruby wrapper for the [Swanest](https://swanest.com/) API
+
 *ruby code design inspired from angel list gem*
 
 ## Installation
@@ -31,7 +32,7 @@ end
 ```
 
 ## Scenario 1
-from client i want to login to swanest
+#### from client i want to login to swanest
 ```ruby
 Swanest.app_login
 ```
@@ -41,7 +42,7 @@ if you wish to login with another scope and to another default url you can overr
 Swanest.app_login({scope: "another scope"},{url: "another url"})
 ```
 ## Scenario 2
-from client i want to create user in swanest
+#### from client i want to create user in swanest
 ```ruby
 Swanest.create_user({partnerId:"your internal id"},{}, access_token)
 ```
