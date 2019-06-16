@@ -28,13 +28,14 @@ module Swanest
       # @param options [Hash] A customizable set of options.
       
       def get_portfolios(params={}, options={}, user_access_token)
+        default_params = {}
         default_options = {
           url: broker_endpoint,
           headers: {
             "Authorization" => "Bearer #{user_access_token}"
           }          
         }
-        get("/portfolios", params, default_options.deep_merge(options))
+        get("/portfolios", default_params.deep_merge(params), default_options.deep_merge(options))
       end
 
     end
