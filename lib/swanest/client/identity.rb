@@ -19,6 +19,9 @@ module Swanest
         default_options = {
           url: identity_endpoint
         }
+
+        debugger
+
         post("/oauth/token", default_params.deep_merge(params), default_options.deep_merge(options))
       end
 
