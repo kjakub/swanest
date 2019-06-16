@@ -43,7 +43,7 @@ Swanest.app_login({scope: "another scope"},{url: "another url"})
 ## Scenario 2
 from client i want to create user in swanest
 ```ruby
-Swanest.new.create_user({partnerId:"your internal id"},{}, access_token)
+Swanest.create_user({partnerId:"your internal id"},{}, access_token)
 ```
 **access_token** is not required, and if not supplied it will use `Swanest.app_login` by default 
 
