@@ -19,7 +19,7 @@ module Swanest
         default_options = {
           url: identity_endpoint
         }
-        post("/oauth/token", default_params.deep_merge(params), default_options.deep_merge(options))
+        post("/oauth/token", default_params.swanest_deep_merge(params), default_options.swanest_deep_merge(options))
       end
 
       # Returns access token for user with broker,profile,makrket_data read 
@@ -39,7 +39,7 @@ module Swanest
         default_options = {
           url: identity_endpoint
         }
-        post("/oauth/token", default_params.deep_merge(params), default_options.deep_merge(options))
+        post("/oauth/token", default_params.swanest_deep_merge(params), default_options.swanest_deep_merge(options))
       end
       
       # Returns a hash with userId created {"userId"=>""}
@@ -64,7 +64,7 @@ module Swanest
             "Authorization" => "Bearer #{access_token}"
           },
         }
-        post("/users/shared", default_params.deep_merge(params), default_options.deep_merge(options))
+        post("/users/shared", default_params.swanest_deep_merge(params), default_options.swanest_deep_merge(options))
       end
 
     end
