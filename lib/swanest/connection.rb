@@ -24,7 +24,7 @@ module Swanest
         :ssl => {:verify => false }
       }
 
-      @connection = Faraday.new(connection_options.deep_merge(default_options.deep_merge(options))) do |builder|
+      @connection = Faraday.new(connection_options.swanest_deep_merge(default_options.swanest_deep_merge(options))) do |builder|
         #builder.use Swanest::Request::MultipartWithFile
         #builder.use Swanest::Request::SwanestOAuth, authentication if authenticated?
         #builder.use Faraday::Request::Multipart

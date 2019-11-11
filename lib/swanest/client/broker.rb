@@ -18,7 +18,7 @@ module Swanest
             "Authorization" => "Bearer #{user_access_token}"
           }
         }
-        post("/portfolios", default_params.deep_merge(params), default_options.deep_merge(options))
+        post("/portfolios", default_params.swanest_deep_merge(params), default_options.swanest_deep_merge(options))
       end
 
       # Returns all portolios for user
@@ -35,7 +35,7 @@ module Swanest
             "Authorization" => "Bearer #{user_access_token}"
           }          
         }
-        get("/portfolios", default_params.deep_merge(params), default_options.deep_merge(options))
+        get("/portfolios", default_params.swanest_deep_merge(params), default_options.swanest_deep_merge(options))
       end
 
     end
